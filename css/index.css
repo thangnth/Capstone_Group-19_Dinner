@@ -526,25 +526,46 @@ border: transparent;
 color: #fff;
 }
 
-.video .item_hidden{
-    display:none;
-    position: relative;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
 
-}
 
-.video .item_hidden iframe{
-display: block;
-width: 100%;
-height: 420px;
+#small-dialog{
 max-width: 750px;
 margin: 40px auto;
-/* position: absolute; */
-border-radius: 10px;
+position: relative;
 }
+
+.zoom-anim-dialog{
+    opacity: 1;
+    transform: scale(1);
+}
+
+iframe{
+    width: 100%;
+    height: 420px;
+    display: block;
+    border-radius: 10px;
+}
+
+button.mfp-close{
+
+    line-height: 40px;
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 0 18px 10px;
+    color: #FFF !important;
+    z-index: 1046;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace;
+    background-color: transparent;
+}
+
+
+
+
 
 /* BLOG */
 .blog{

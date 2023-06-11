@@ -47,6 +47,9 @@
       rel="stylesheet"
     />
 
+    <!-- Magnific Popup libarary CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Fancy box css -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"> -->
     <!-- MY CSS -->
@@ -61,9 +64,9 @@
             <nav class="col-8">
               <ul class="list-unstyled">
                   <li class="active d-inline px-2"><a class="text-decoration-none"href="#">Home</a></li>
-                  <li class="d-inline px-lg-2"><a class="text-decoration-none" href="#">About</a></li> 
+                  <li class="d-inline px-lg-2"><a class="text-decoration-none" href="https://wp.w3layouts.com/diner/about-page/">About</a></li> 
                   <li class="d-inline px-lg-2"><a class="text-decoration-none" href="service.html">Services</a></li>
-                  <li class="d-inline px-lg-2"><a class="text-decoration-none" href="#">Blogs</a></li>
+                  <li class="d-inline px-lg-2"><a class="text-decoration-none" href="blog_1.html">Blogs</a></li>
                   <li class="d-inline px-lg-2"><a class="text-decoration-none" href="contact.html">Contact</a></li>
               </ul>
             </nav>
@@ -381,17 +384,13 @@
       <section class="video py-5">
         <div class="container py-lg-5">
           <div class="video_content  position-relative grids row align-items-center justify-content-center">
-              <a class="d-inline-block fa-sharp fa-solid fa-play" href="#video-play">
+              <a class="d-inline-block fa-sharp fa-solid fa-play open-popup-link" href="#small-dialog">
               </a>
-              <!-- PENDING  -->
-              <!-- Hidden video -->
-              <div class="item_hidden">
-                <iframe id="video-play"title="vimeo-player" src="https://player.vimeo.com/video/305185528?h=195bf3cba0" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+              <!-- Hidden Video -->
+              <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                <iframe src="https://player.vimeo.com/video/305185528" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
               </div>
           </div>
-   
-
-          
         </div>
       </section>
       <section class="blog py-5">
@@ -417,7 +416,6 @@
                 <div class="info">
                   <a class="read" href="blog_1.html">Read More <span class="fa fa-chevron-right"></span></a>
                 </div>
-              
               </div>
             </div>   
             <!-- blog item 2 -->
@@ -592,6 +590,9 @@
         <!-- Back to top -->
         <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
     </footer>
+
+    <!-- Hidden video .mfp-hide is required to hide the video-->
+
     <!-- Bootstrap JavaScript Libraries -->
     <!-- Start -->
     <script
@@ -617,6 +618,14 @@
       time: 1500,
       delay: 100,
     });</script>
+    <!--  Magnific Pop-up Lib-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $('.open-popup-link').magnificPopup({
+    type:'inline',
+    midClick: true 
+  });
+  </script>
 
-  </body>
+</body>
 </html>
